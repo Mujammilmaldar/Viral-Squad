@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block main %}
+    {% load static %}
+<body>
+    <div id="preloader2">
+      <video id="preloaderVideo" src="{% static '/assets/video/logo.mp4' %}" autoplay muted onended="hidePreloader()"></video>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+  
+        <a href="/home" class="logo d-flex align-items-center  me-auto me-lg-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="{% static '/assets/img/logo.png' %}" alt="logo">
+          
+        </a>
+      </div>
+    </header><!-- End Header -->
+  
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Welcome To <span>Viral Squad</span></h2>
+            <p>a trailblazing digital marketing agency embarking on its inaugural journey. Specializing in social media marketing and content creation, we are gearing up for an innovative pilot run. As a Team Leader within our dynamic team, your role is pivotal in leading the promotion of our brand and services, as well as supporting emerging brands, across various social media platforms. Your leadership, creativity, and dedication will be instrumental in shaping our early success and establishing a strong foundation for future endeavors. We're thrilled to have you join us on this exciting journey.</p>
+            <a href="/application-for-team-leader" class="btn-get-started">Application For team leader</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero Section -->
+  
+  
+  
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <div id="preloader">
+      <div class="line"></div>
+    </div>
+  
+
+
+{% endblock main %}

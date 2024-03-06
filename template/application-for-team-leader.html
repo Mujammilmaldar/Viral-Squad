@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+<header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.png" alt="">  
+      </a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" data-aos="fade" data-aos-delay="1500">
+
+    <!-- ======= End Page Header ======= -->
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Application For Team Leader</h2>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Header -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        
+
+        <div class="row justify-content-center mt-4">
+
+          <div class="col-lg-9">
+            <form action="/application-for-team-leader" method="POST" enctype="multipart/form-data" role="form" class="php-email-form">
+                {% csrf_token %}
+              <div class="row color-white">
+                <div class="row color-white mt-3">
+                  <div class="col-md-6 form-group">
+                    
+                    <input type="text" name="name" class="form-control" id="nameInput" placeholder="Candidate Full Name" required>
+                  </div>
+                  <div class="col-md-6 form-group d-flex" style="display: flex;flex-direction: row;">
+                    <label for="exampleFormControlFile1" class="pt-1" style="color: black;font-weight: 100;font-size: 20px;padding-top: 12px;width: 50%;">Date Of Birth: </label>
+                    <input type="date" class="form-control text-black" name="dob" id="dob" 
+
+                    required>
+                  </div>
+                </div>
+                <div class="row color-white mt-3">
+                  
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="CollegeName" id="CollegeName" placeholder="College Name" required>
+                  </div>
+                </div>
+                <div class="row color-white mt-3">
+
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="BranchOfStudy" id="BranchOfStudy" placeholder="Branch Of Study Example:-Bachelors & Management Studies" required>
+                  </div>
+                </div>
+                <div class="row color-white mt-3">
+                <div class="form-group mt-3">
+                  <input type="text" name="yearofeducation" class="form-control" id="yearofeducation" placeholder="Year Of Education / STD Example 1st year" required>
+                </div>
+                </div>
+                <div class="row color-white mt-3">
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" class="form-control" name="town" id="town" placeholder="Town Example:-Chembur" required>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                  <input type="text" class="form-control" name="city" id="city" placeholder="City Example:-Mumbai Suburban" required>
+                </div>
+                </div>
+
+                <div class="row color-white mt-3">
+                  <div class="col-md-6 form-group mt-3">
+                    <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Contact Number" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 ">
+                    <input type="number" class="form-control" name="mobile2" id="mobile2" placeholder="Alternate Contact Number">
+                  </div>
+                  </div>
+                  <div class="row color-white mt-3">
+                  <div class="col-md-4 form-group mt-3">
+                    <input type="text" class="form-control" name="insta" id="insta" placeholder="Instagram Id:" required>
+                  </div>
+                  <div class="col-md-4 form-group mt-3">
+                    <input type="text" class="form-control" name="linkedin" id="linkedin" placeholder="If LinkedIn Id ">
+                  </div>
+                  <div class="col-md-4 form-group mt-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Id" required>
+                  </div>
+                </div>
+                <div class="row color-white mt-3">
+
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="address" rows="3" placeholder="Address" required></textarea>
+                  </div>
+                </div>
+                <style>
+                  .form-group {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                  }
+                  
+                  .form-group label {
+                      color: rgb(0, 0, 0);
+                      font-weight: 100;
+                      font-size: 20px;
+                      padding-top: 12px;
+                  }
+                  
+                  .form-group input[type='file'] {
+                      width: 100%;
+                      border: 1px solid #000000;
+                      padding: 10px;
+                      margin-top: 10px;
+                      color: black;
+                  }
+                  </style>
+                  
+                  <div class="row color-white">
+                      <div class="form-group col-md-6">
+                          <label for="photo">Photo</label>
+                          <input type="file" class="form-control-file" id="photo"
+                          name="photo">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="adharCard">Aadhar Card: </label>
+                          <input type="file" class="form-control-file" name="aadharcard" id="adharCard">
+                      </div>
+                  </div>
+                  <div class="row color-white mt-3">
+                    <div class="col-md-8 form-group mt-3">
+                      <label for="exampleFormControlFile1" class="pt-1" style="color: black;font-weight: 100;font-size: 20px;padding-top: 12px;">Any Other Achievement: </label>
+                      <textarea type="text" class="form-control" name="achievement" id="town" rows="4" placeholder="If you have any additional achievements, please provide a brief description here. If not, rest assured that joining Viral Squad signifies the first step towards building your list of accomplishments."></textarea>
+                    </div>
+                    <div class="form-group col-md-4 mt-2">
+                          <label for="exampleFormControlFile1" class="pt-1" style="color: black;font-weight: 100;font-size: 20px;padding-top: 12px;">Upload Here: </label>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1" style="object-fit: contain;height: 15vh;" name="achievementfile">
+                    </div>
+                  </div>
+                  <div class="row color-white mt-3 ml-3" style="margin-left: 2px;">
+                    <div class="form-check ml-3">
+                        <label class="form-check-label text-black text-uppercase" for="exampleCheck1">Mark a tick if you agree with the statement</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="statement1Checkbox" name="statement1Checkbox">
+                      <label class="form-check-label text-black" for="statement1Checkbox">Have you completed any internships with other companies prior to joining our organization?</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="statement2Checkbox" name="statement2Checkbox">
+                      <label class="form-check-label text-black" for="statement2Checkbox">Are you enthusiastic about and capable of fulfilling the role of Team Leader within Viral Squad during this internship?</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="statement3Checkbox" name="statement3Checkbox">
+                      <label class="form-check-label text-black" for="statement3Checkbox">As a Team Leader, are you comfortable with the responsibility of creating content when necessary?</label>
+                    </div>
+                  
+                </div>
+                
+                {% if success %}
+                <div class="sent-message"> {{success}} </div>
+                {% endif %}
+                    
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center mt-5 mb-5"><button type="submit">Submit</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+{% endblock main %}
+    
